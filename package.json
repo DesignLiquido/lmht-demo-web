@@ -1,9 +1,7 @@
 {
-  "scripts": {
-    "gerar-web": "tsc && browserify dist/interface-lmht.js --s Lmht -o dist/lmht.js"
-  },
+  "name": "lmht-demo-web",
+  "description": "Uma demonstração de como trabalhar com HTML e LMHT para a Web.",
   "dependencies": {
-    "@designliquido/lmht-js": "^0.1.2",
     "monaco-editor": "^0.34.1"
   },
   "devDependencies": {

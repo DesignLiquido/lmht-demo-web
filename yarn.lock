@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@designliquido/lmht-js@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@designliquido/lmht-js/-/lmht-js-0.1.2.tgz#91509a6dc34e34edcec69d2b6f85568c77ea0994"
-  integrity sha512-imYcuQl8a1Rpp6EqaRJDGzCzjixsLkfaMlkwrXKoPAB+rkXPrOYo+b3Mr/cUrzE/vbLHx9MdkeYJo/CJHniEDA==
+"@designliquido/lmht-js@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@designliquido/lmht-js/-/lmht-js-0.1.6.tgz#a2b1a3143e7e528d5f5234dfa7e5a9587f4f4d3a"
+  integrity sha512-6sRXtlRAjxGPyBRGzUoGAm4LJuos37vJT5SL7sDvSvlrN9QWFWqg1Q95RzLlRtETpX0jk9ufc3UytFkDuBRPIQ==
   dependencies:
     saxon-js latest
 
@@ -940,7 +940,7 @@ safer-buffer@^2.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-saxon-js@latest:
+saxon-js@^2.5.0, saxon-js@latest:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/saxon-js/-/saxon-js-2.5.0.tgz#adfdb4b2df5733bd6781eccc28da170d31278826"
   integrity sha512-bdUmnW//mNha5OFYGDA/rqh+4ZuHPtYUQor8yqnOIhFb0JxD+mauFuZbp2GpEwHnTEpFTQ8OcoVFLcDxu7SXAg==
