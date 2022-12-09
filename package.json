@@ -1,5 +1,13 @@
 {
+  "scripts": {
+    "gerar-web": "tsc && browserify dist/interface-lmht.js --s Lmht -o dist/lmht.js"
+  },
   "dependencies": {
+    "@designliquido/lmht-js": "^0.1.2",
     "monaco-editor": "^0.34.1"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "typescript": "^4.9.4"
   }
 }

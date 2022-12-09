@@ -1,9 +1,16 @@
-const ed1 = window.monaco.editor.create(document.getElementById("container1"), {
-    value: "function hello() {\n\talert('Hello world!');\n}",
-    language: "javascript"
-})
-const model = ed1.getModel()
+const lmhtWeb = new window.Lmht.LmhtWeb();
 
-window.monaco.editor.create(document.getElementById("container2"), {
-    model,
-})
+window.monaco.editor.create(document.getElementById("containerLmht"), {
+    value: "<lmht>\n\t<cabeça></cabeça>\n\t<corpo></corpo>\n\t</lmht>",
+    language: "lmht"
+});
+
+lmhtWeb.converter("<lmht>\n\t<cabeça></cabeça>\n\t<corpo></corpo>\n\t</lmht>").then(resposta => {
+    console.log(resposta)
+});
+
+
+window.monaco.editor.create(document.getElementById("containerHtml"), {
+    value: '',
+    language: "html"
+});
