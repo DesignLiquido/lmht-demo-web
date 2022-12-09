@@ -1,11 +1,18 @@
 {
   "name": "lmht-demo-web",
   "description": "Uma demonstração de como trabalhar com HTML e LMHT para a Web.",
+  "scripts": {
+    "recriar-dist": "rm -r -f ./dist && mkdir dist && cd dist && mkdir vs && cd ..",
+    "empacotar": "yarn recriar-dist && yarn empacotar-monaco && copyfiles -V ./*.js ./dist && copyfiles ./lmht.sef.json ./dist && copyfiles -V ./index.html ./dist",
+    "empacotar-monaco": "cp -r ./node_modules/monaco-editor/min/vs/* ./dist/vs",
+    "publicar": "yarn empacotar && gh-pages -d dist"
+  },
   "dependencies": {
     "monaco-editor": "^0.34.1"
   },
   "devDependencies": {
     "browserify": "^17.0.0",
+    "copyfiles": "^2.4.1",
     "typescript": "^4.9.4"
   }
 }
