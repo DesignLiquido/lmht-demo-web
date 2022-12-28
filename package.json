@@ -2,9 +2,9 @@
   "name": "lmht-demo-web",
   "description": "Uma demonstração de como trabalhar com HTML e LMHT para a Web.",
   "scripts": {
-    "recriar-dist": "rm -r -f ./dist && mkdir dist && cd dist && mkdir vs && cd ..",
-    "empacotar": "yarn recriar-dist && yarn empacotar-monaco && copyfiles -V ./*.js ./dist && copyfiles ./lmht.sef.json ./dist && copyfiles -V ./index.html ./dist",
-    "empacotar-monaco": "cp -r ./node_modules/monaco-editor/min/vs/* ./dist/vs",
+    "recriar-dist": "rimraf ./dist && mkdir dist && cd dist && mkdir vs && cd ..",
+    "empacotar": "yarn recriar-dist && yarn copiar-arquivos",
+    "copiar-arquivos": "yarn copy-files-from-to",
     "publicar": "yarn empacotar && gh-pages -d dist"
   },
   "dependencies": {
@@ -12,8 +12,32 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
+    "copy-files-from-to": "^3.6.0",
     "copyfiles": "^2.4.1",
     "gh-pages": "^4.0.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.9.4"
-  }
+  },
+  "copyFiles": [
+    {
+      "from": "index.html",
+      "to": "dist/index.html"
+    },
+    {
+      "from": "lmht.sef.json",
+      "to": "dist/lmht.sef.json"
+    },
+    {
+      "from": "lmht-reverso.sef.json",
+      "to": "dist/lmht-reverso.sef.json"
+    },
+    {
+      "from": "*.js",
+      "to": "dist/"
+    },
+    {
+      "from": "node_modules/monaco-editor/min/vs/**/*",
+      "to": "dist/vs"
+    }
+  ]
 }
